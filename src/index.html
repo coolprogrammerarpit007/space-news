@@ -6,9 +6,44 @@
     <title>Nasa Space News</title>
     <link href="./output.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-[url('./images/space.jpg')] bg-center bg-no-repeat bg-cover">
     <div class="loader hidden">
         <img src="./images/rocket.svg" alt="loader image">
+    </div>
+
+    <!-- ******************************************** -->
+    <!-- ******************************************** -->
+
+    <!-- Content Loads here -->
+
+    <!-- Load More -->
+    <div class="header bg-transparent text-center mb-10">
+        <div class="load-more bg-gray-600 w-[50%] m-auto p-2.5 rounded-lg">
+            <button class="load bg-blue-500 text-white py-2 px-4 capitalize rounded-xl hover:bg-white hover:text-blue-600">load more</button>
+        </div>
+    </div>
+
+
+    <!-- ******************************************* -->
+    <!-- ******************************************* -->
+    <!-- Content Loads Here -->
+
+    <div class="container flex flex-col justify-center items-center">
+        <!-- Image Container -->
+        <div class="img-container w-[50%]">
+            <img src="./images/mars.jpg" alt="planer photo" class="w-full h-auto">
+        </div>
+
+        <!-- Container for space news -->
+        <div class="news-container bg-white p-4 flex flex-col gap-5 w-[50%]">
+            <div class="title font-bold capitalize">
+                <p>A Halo Around the Moon</p>
+            </div>
+            <div class="description w-[100%]">
+                <p class="break-all leading-5">Have you ever seen a halo around the Moon? This fairly common sight occurs when high thin clouds containing millions of tiny ice crystals cover much of the sky. Each ice crystal acts like a miniature lens. Because most of the crystals have a similar elongated hexagonal shape, light entering one crystal face and exiting through the opposing face refracts 22 degrees, which corresponds to the radius of the Moon Halo. A similar Sun Halo may be visible during the day. The town in the foreground of the above picture is San Sebastian, Spain. The distant planet Jupiter appears by chance on the halo's upper right. Exactly how ice-crystals form in clouds remains under investigation.</p>
+            </div>
+            <p class="written"><span class="date">2000-05-15</span> Juan Carlos Casado</p>
+        </div>
     </div>
 </body>
 
