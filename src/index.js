@@ -3,13 +3,14 @@
 `use strict`;
 
 // Getting Acess to the container
-const container = document.querySelector(`.container`);
+const container = document.querySelector
+(`.container`);
 const loader = document.querySelector(`.loader`);
 const header = document.querySelector(`.header`);
 let count = 5;
 const nasaAPIURL = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=${count}`;
-
-
+const loadBtn = document.querySelector(`.load`);
+console.log(loadBtn);
 
 
 // Fetching the API 
@@ -22,7 +23,8 @@ const spaceFunction = async function(){
 }
 
 // Consuming the API
-spaceFunction().then((data)=>{
+const newSpaceFunction = () =>{
+    spaceFunction().then((data)=>{
     console.log(data);
     let html = ``;
     // Itterating over data```
@@ -62,3 +64,14 @@ spaceFunction().then((data)=>{
 
     
 })
+
+}
+
+newSpaceFunction();
+
+// Adding event listener to the loadbtn
+
+loadBtn.addEventListener(`click`,function(e){
+    console.log(`btn clicked!`);
+    newSpaceFunction();
+});
