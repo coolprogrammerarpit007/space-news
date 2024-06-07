@@ -588,6 +588,22 @@ video {
   }
 }
 
+border--black{
+  border:1px solid black;
+}
+
+border--red{
+  border:1px solid red;
+}
+
+border--green{
+  border:1px solid green;
+}
+
+border--blue{
+  border:1px solid blue;
+}
+
 .visible {
   visibility: visible;
 }
@@ -610,6 +626,14 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
 }
 
 .w-\[100\%\] {
@@ -676,8 +700,22 @@ video {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-\[seagreen\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 139 87 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/images\/space\.jpg\'\)\] {
   background-image: url('./images/space.jpg');
+}
+
+.bg-\[url\(\'\.\/images\/mars\.jpg\'\)\] {
+  background-image: url('./images/mars.jpg');
 }
 
 .bg-cover {

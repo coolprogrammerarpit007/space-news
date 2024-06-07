@@ -5,6 +5,7 @@
 // Getting Acess to the container
 const container = document.querySelector(`.container`);
 const loader = document.querySelector(`.loader`);
+const header = document.querySelector(`.header`);
 let count = 5;
 const nasaAPIURL = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=${count}`;
 
@@ -55,8 +56,9 @@ spaceFunction().then((data)=>{
         if(html){
             loader.classList.add(`hidden`);
             container.classList.remove(`hidden`);
+            header.classList.remove(`hidden`);
         }
-    },"5000")
+    },"6000")
 
     
 })
