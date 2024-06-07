@@ -1,8 +1,10 @@
+
+
 `use strict`;
 
 // Getting Acess to the container
 const container = document.querySelector(`.container`);
-
+const loader = document.querySelector(`.loader`);
 let count = 5;
 const nasaAPIURL = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=${count}`;
 
@@ -20,8 +22,9 @@ const spaceFunction = async function(){
 
 // Consuming the API
 spaceFunction().then((data)=>{
+    console.log(data);
     let html = ``;
-    // Itterating over data
+    // Itterating over data```
     data.forEach((element,index) => {
         // destructuring the data
         const {date,explanation,hdurl,title} = element;
@@ -29,7 +32,7 @@ spaceFunction().then((data)=>{
         // Now Updating the DOM 
 
        html +=  `
-        <div class="img-container w-[50%]">
+        <div class="img-container w-[50%] my-4">
             <img src="${hdurl}" alt="planet photo" class="w-full h-auto">
         </div>
 
@@ -48,4 +51,12 @@ spaceFunction().then((data)=>{
     // Now updating it to dom
 
     container.innerHTML = html;
+    setTimeout(()=>{
+        if(html){
+            loader.classList.add(`hidden`);
+            container.classList.remove(`hidden`);
+        }
+    },"5000")
+
+    
 })
